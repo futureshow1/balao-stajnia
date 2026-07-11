@@ -7,12 +7,25 @@ zastępująca starą stronę balao.pl (hodowla psów, frameset z lat 2000).
 oddech, „tu i teraz") + drugi filar: hipoterapia. Oferta dla dzieci
 (oprowadzanki) zachowana, ale nie jest już na pierwszym planie.
 
-## Podgląd
+## Dwie wersje (prezentacja dwuetapowa dla pani Ani)
 
-- **NA ŻYWO (link dla pani Ani):** https://futureshow1.github.io/balao-stajnia/
-  Repo: github.com/futureshow1/balao-stajnia (konto gh: futureshow1).
-  Aktualizacja: `git push` w tym folderze → Pages przebudowuje się ~1 min.
-- Lokalnie: serwer `balao-stajnia` w `.claude/launch.json` → http://localhost:8155
+- **ETAP 1 — konie / kobiety 40+ / hipoterapia** (bez psów):
+  https://futureshow1.github.io/balao-stajnia/  (plik `index.html`)
+- **ETAP 2 — pełna wersja z hodowlą psów** (konie + dział „Psy Balao":
+  dogi niemieckie błękitne, Jack Russell teriery, galeria, szczenięta, ZKwP):
+  https://futureshow1.github.io/balao-stajnia/pelna/  (plik `pelna/index.html`)
+
+Kolejność etapów jest do decyzji Jana. Obie wersje żyją równolegle.
+Repo: github.com/futureshow1/balao-stajnia (konto gh: futureshow1).
+Aktualizacja: `git push` w tym folderze → Pages przebudowuje się ~1 min.
+Lokalnie: serwer `balao-stajnia` w `.claude/launch.json` →
+http://localhost:8155 (etap 1) oraz http://localhost:8155/pelna/ (etap 2).
+
+### Zdjęcia psów
+Odzyskane ze starej strony balao.pl/images/ (gif→jpg), w `pelna/img/dog-*.jpg`:
+dogi błękitne (Chiaro, Ulisses, November Rain, Ax) + Jack Russelle
+(For Pleasure, Gummie Bear, Eye Catcher Glen, First Flash). Do potwierdzenia
+przez panią Anię: czy hodowla nadal aktywna, aktualne psy/mioty, nowsze foto.
 
 ## Źródła treści
 
