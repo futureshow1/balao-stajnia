@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stajnia i Hodowla Balao — jazda konna, hipoterapia, dogi i Jack Russelle | Zakrzew k. Warki</title>
+<meta name="description" content="Balao w Zakrzewie koło Warki: nauka jazdy konnej dla dorosłych i dzieci, przejażdżki po lesie, hipoterapia, a także hodowla dogów niemieckich błękitnych i Jack Russell terierów z rodowodami ZKwP.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%232e4636'/%3E%3Ctext x='50' y='72' font-size='60' text-anchor='middle'%3E%F0%9F%90%8E%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Stajnia Balao — jazda konna i hipoterapia">
+<meta property="og:description" content="Las, koń i Ty. Nauka jazdy konnej dla kobiet 40+, przejażdżki po lesie i hipoterapia w Zakrzewie koło Warki.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/balao-hero-jezdzcy-las.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --las:#2e4636;        /* leśna zieleń */
+  --las-ciemny:#1f3226;
+  --siano:#c99a62;      /* ciepły karmel */
+  --siano-jasne:#e8d5b5;
+  --krem:#faf6ee;
+  --krem-ciemny:#f1e9da;
+  --tekst:#33302a;
+  --tekst-jasny:#6d675c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;color:var(--tekst);background:var(--krem);line-height:1.7;font-weight:300;font-size:17px}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.2}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* ---------- NAWIGACJA ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,246,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(46,70,54,.12)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;letter-spacing:.06em;color:var(--las);text-decoration:none}
+.logo span{color:var(--siano)}
+.menu{display:flex;gap:28px;list-style:none}
+.menu a{text-decoration:none;font-size:.82rem;text-transform:uppercase;letter-spacing:.14em;font-weight:400;color:var(--tekst);transition:color .2s}
+.menu a:hover{color:var(--siano)}
+.menu a.cta{color:var(--las);font-weight:600}
+#menu-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--las);cursor:pointer}
+
+/* ---------- HERO ---------- */
+header{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;
+  background:linear-gradient(rgba(24,38,29,.48),rgba(24,38,29,.72)),
+  url('img/balao-hero-jezdzcy-las.jpg') center 38%/cover no-repeat,
+  linear-gradient(160deg,var(--las-ciemny) 0%,var(--las) 55%,#4a6b52 100%);color:var(--krem);overflow:hidden}
+header::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse 80% 50% at 70% 100%, rgba(201,154,98,.18), transparent 60%);pointer-events:none}
+.hero-inner{position:relative;z-index:2;padding:120px 24px 80px;max-width:900px;margin:0 auto;text-align:center}
+.hero-kicker{text-transform:uppercase;letter-spacing:.3em;font-size:.8rem;color:var(--siano-jasne);margin-bottom:24px}
+h1{font-size:clamp(2.4rem,6vw,4.4rem);margin-bottom:12px}
+h1 em{font-style:italic;color:var(--siano-jasne)}
+.hero-sub{font-size:clamp(1.05rem,2.2vw,1.35rem);font-weight:300;max-width:620px;margin:20px auto 40px;color:rgba(250,246,238,.85)}
+.przyciski{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 36px;border-radius:2px;text-decoration:none;font-size:.85rem;text-transform:uppercase;letter-spacing:.16em;font-weight:500;transition:all .25s}
+.btn-full{background:var(--siano);color:var(--las-ciemny)}
+.btn-full:hover{background:var(--siano-jasne)}
+.btn-ghost{border:1px solid rgba(250,246,238,.5);color:var(--krem)}
+.btn-ghost:hover{border-color:var(--siano-jasne);color:var(--siano-jasne)}
+.hero-oddech{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:rgba(250,246,238,.55);z-index:2}
+
+/* ---------- SEKCJE ---------- */
+section{padding:96px 0}
+.kicker{text-transform:uppercase;letter-spacing:.28em;font-size:.78rem;color:var(--siano);margin-bottom:14px}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);color:var(--las);margin-bottom:24px}
+.lead{font-size:1.15rem;color:var(--tekst-jasny);max-width:640px}
+
+/* Dla Ciebie */
+#dla-ciebie .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.mantra{list-style:none;margin-top:36px}
+.mantra li{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:var(--las);padding:18px 0;border-bottom:1px solid var(--krem-ciemny)}
+.mantra li:first-child{border-top:1px solid var(--krem-ciemny)}
+.foto-ramka{aspect-ratio:4/5;background:linear-gradient(155deg,var(--krem-ciemny),var(--siano-jasne));border-radius:2px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.foto-ramka img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* Oferta */
+#oferta{background:var(--krem-ciemny)}
+#oferta .naglowek{text-align:center;max-width:640px;margin:0 auto 56px}
+#oferta .lead{margin:0 auto}
+.karty{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.karta{background:var(--krem);padding:40px 32px;border-radius:2px;border-top:3px solid var(--siano);transition:transform .25s, box-shadow .25s}
+.karta:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(46,70,54,.12)}
+.karta .ikona{font-size:1.9rem;margin-bottom:18px}
+.karta h3{font-size:1.45rem;color:var(--las);margin-bottom:12px}
+.karta p{font-size:.95rem;color:var(--tekst-jasny)}
+.karta .dla{display:inline-block;margin-top:16px;font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--siano);font-weight:500}
+
+/* Hipoterapia */
+#hipoterapia{background:var(--las);color:var(--krem)}
+#hipoterapia .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+#hipoterapia h2{color:var(--krem)}
+#hipoterapia .kicker{color:var(--siano-jasne)}
+#hipoterapia p{color:rgba(250,246,238,.82)}
+#hipoterapia .foto-ramka{background:linear-gradient(155deg,#3a5a45,#243b2d)}
+#hipoterapia .foto-podpis{color:rgba(250,246,238,.5)}
+#hipoterapia .btn{margin-top:28px}
+
+/* Konie */
+.konie-siatka{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:48px}
+.kon{text-align:center}
+.kon .portret{aspect-ratio:1;border-radius:2px;background:linear-gradient(155deg,var(--krem-ciemny),var(--siano-jasne));margin-bottom:18px;overflow:hidden}
+.kon .portret img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.kon:hover .portret img{transform:scale(1.05)}
+.kon p{font-size:.92rem;color:var(--tekst-jasny)}
+
+/* Psy Balao */
+#psy{background:var(--krem-ciemny)}
+#psy .naglowek{max-width:680px;margin:0 auto 52px;text-align:center}
+#psy .naglowek .lead{margin:0 auto}
+.rasy{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.rasa{background:var(--krem);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;border-top:3px solid var(--siano)}
+.rasa .foto{aspect-ratio:16/10;overflow:hidden;background:var(--krem-ciemny)}
+.rasa .foto img{width:100%;height:100%;object-fit:cover}
+.rasa .tresc{padding:28px 30px 32px}
+.rasa h3{font-size:1.6rem;color:var(--las);margin-bottom:10px}
+.rasa p{font-size:.95rem;color:var(--tekst-jasny)}
+.psy-galeria-tytul{text-align:center;margin:64px 0 8px;font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--las)}
+.psy-galeria-pod{text-align:center;font-size:.9rem;color:var(--tekst-jasny);margin-bottom:36px}
+.psy-galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.pies{text-align:center}
+.pies .portret{aspect-ratio:1;border-radius:2px;overflow:hidden;background:var(--krem);margin-bottom:12px}
+.pies .portret img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.pies:hover .portret img{transform:scale(1.05)}
+.pies h4{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500;color:var(--las)}
+.pies span{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:var(--siano)}
+.psy-info{margin-top:56px;background:var(--las);color:var(--krem);border-radius:2px;padding:44px 40px;text-align:center}
+.psy-info h3{font-size:1.9rem;color:var(--krem);margin-bottom:14px}
+.psy-info p{color:rgba(250,246,238,.85);max-width:620px;margin:0 auto 12px}
+.psy-info .rodowod{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--siano-jasne);margin-bottom:24px}
+.psy-info .btn{background:var(--siano);color:var(--las-ciemny)}
+.psy-info .btn:hover{background:var(--siano-jasne)}
+
+/* O nas */
+#o-nas{background:var(--krem-ciemny)}
+#o-nas .wrap{max-width:760px;text-align:center}
+#o-nas p{margin-bottom:20px;color:var(--tekst-jasny)}
+#o-nas p strong{color:var(--tekst)}
+
+/* Opinie */
+#opinie{text-align:center}
+.gwiazdki{font-size:1.4rem;letter-spacing:.3em;color:var(--siano);margin-bottom:16px}
+.opinia-duza{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3.4vw,2.2rem);font-style:italic;color:var(--las);max-width:700px;margin:0 auto 16px}
+#opinie .zrodlo{font-size:.85rem;text-transform:uppercase;letter-spacing:.18em;color:var(--tekst-jasny)}
+
+/* Kontakt */
+#kontakt{background:var(--las-ciemny);color:var(--krem)}
+#kontakt h2{color:var(--krem)}
+#kontakt .kicker{color:var(--siano-jasne)}
+#kontakt .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.dane{list-style:none;margin-top:28px}
+.dane li{padding:14px 0;border-bottom:1px solid rgba(250,246,238,.14);display:flex;gap:16px;align-items:baseline}
+.dane .etykieta{font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;color:var(--siano-jasne);min-width:86px}
+.dane a{color:var(--krem);text-decoration:none}
+.dane a:hover{color:var(--siano-jasne)}
+.spolecznosci{margin-top:32px;display:flex;gap:14px}
+.spolecznosci a{border:1px solid rgba(250,246,238,.35);padding:10px 22px;border-radius:2px;text-decoration:none;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;transition:all .25s}
+.spolecznosci a:hover{border-color:var(--siano-jasne);color:var(--siano-jasne)}
+.mapa{display:flex;flex-direction:column;height:100%}
+#kontakt iframe{width:100%;flex:1;min-height:320px;border:0;border-radius:2px;filter:sepia(.15) saturate(.85)}
+.mapa-link{margin-top:14px;display:inline-block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--siano-jasne);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s;align-self:flex-start}
+.mapa-link:hover{border-color:var(--siano-jasne)}
+
+footer{background:var(--las-ciemny);color:rgba(250,246,238,.45);text-align:center;padding:28px 24px;font-size:.8rem;border-top:1px solid rgba(250,246,238,.1)}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:860px){
+  #dla-ciebie .wrap,#hipoterapia .wrap,#kontakt .wrap{grid-template-columns:1fr;gap:40px}
+  .rasy{grid-template-columns:1fr;gap:24px}
+  #hipoterapia .foto-kolumna{order:2}
+  section{padding:72px 0}
+  .menu{position:fixed;top:64px;right:0;background:var(--krem);flex-direction:column;padding:24px 32px;gap:18px;transform:translateX(100%);transition:transform .3s;box-shadow:-8px 0 30px rgba(0,0,0,.1)}
+  .menu.otwarte{transform:translateX(0)}
+  #menu-toggle{display:block}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#">Stajnia <span>Balao</span></a>
+    <button id="menu-toggle" aria-label="Menu">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="#dla-ciebie">Dla Ciebie</a></li>
+      <li><a href="#oferta">Oferta</a></li>
+      <li><a href="#hipoterapia">Hipoterapia</a></li>
+      <li><a href="#konie">Konie</a></li>
+      <li><a href="#psy">Psy</a></li>
+      <li><a href="#o-nas">O nas</a></li>
+      <li><a class="cta" href="#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="start">
+  <div class="hero-inner">
+    <p class="hero-kicker">Stajnia Balao · Zakrzew koło Warki</p>
+    <h1>Zawsze chciałaś<br>jeździć konno.<br><em>Teraz jest ten moment.</em></h1>
+    <p class="hero-sub">Las, koń i Ty. Godzina, w której nikt niczego od Ciebie nie chce —
+    tylko oddech, natura i bycie tu i teraz.</p>
+    <div class="przyciski">
+      <a class="btn btn-full" href="#kontakt">Umów pierwszą jazdę</a>
+      <a class="btn btn-ghost" href="#oferta">Zobacz ofertę</a>
+    </div>
+  </div>
+  <p class="hero-oddech">Natura · Oddech · Tu i teraz</p>
+</header>
+
+<section id="dla-ciebie">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Dla kogo jest to miejsce</p>
+      <h2>Dla wspaniałych kobiet po&nbsp;czterdziestce</h2>
+      <p class="lead">Przez lata zajmowałaś się wszystkim i wszystkimi. Praca, dom, rodzina —
+      a marzenie o koniach czekało cierpliwie. W naszej stajni nie musisz niczego udowadniać.
+      Zaczynamy spokojnie, w Twoim tempie, pod okiem doświadczonej instruktorki.</p>
+      <ul class="mantra">
+        <li>Wspaniały spacer po lesie — Ty i koń.</li>
+        <li>Ruch, który wzmacnia mięśnie i prostuje plecy.</li>
+        <li>Kontakt z naturą zamiast ekranu.</li>
+        <li>Oddech. Bycie tu i teraz.</li>
+      </ul>
+    </div>
+    <div class="foto-ramka">
+      <img src="img/balao-las-uszy-konia.jpg" alt="Widok na las znad grzywy konia podczas przejażdżki">
+    </div>
+  </div>
+</section>
+
+<section id="oferta">
+  <div class="wrap">
+    <div class="naglowek">
+      <p class="kicker">Co robimy</p>
+      <h2>Oferta stajni</h2>
+      <p class="lead">Konie mieszkają z nami w Zakrzewie, na skraju lasu —
+      i to właśnie las jest naszą ujeżdżalnią.</p>
+    </div>
+    <div class="karty">
+      <div class="karta">
+        <div class="ikona">🐎</div>
+        <h3>Nauka jazdy konnej</h3>
+        <p>Indywidualne lekcje od podstaw — także (a może przede wszystkim) dla dorosłych,
+        którzy zaczynają później. Spokojnie, bezpiecznie, bez presji.</p>
+        <span class="dla">Dorośli i młodzież</span>
+      </div>
+      <div class="karta">
+        <div class="ikona">🌲</div>
+        <h3>Przejażdżki po lesie</h3>
+        <p>Konna wyprawa leśnymi duktami. Rytm kopyt, zapach sosen i cisza,
+        której nie znajdziesz nigdzie indziej.</p>
+        <span class="dla">Dla jeżdżących</span>
+      </div>
+      <div class="karta">
+        <div class="ikona">🍃</div>
+        <h3>Oprowadzanki</h3>
+        <p>Pierwsze spotkanie z koniem dla najmłodszych — dziecko w siodle,
+        koń prowadzony przez opiekuna, spacer po lesie.</p>
+        <span class="dla">Dla najmłodszych</span>
+      </div>
+      <div class="karta">
+        <div class="ikona">💚</div>
+        <h3>Hipoterapia</h3>
+        <p>Zajęcia terapeutyczne z udziałem konia — ciepło, rytm i łagodny ruch,
+        które wspierają ciało i emocje.</p>
+        <span class="dla">Po konsultacji</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hipoterapia">
+  <div class="wrap">
+    <div class="foto-kolumna foto-ramka">
+      <img src="img/balao-biala-klacz.jpg" alt="Biała klacz stojąca spokojnie przy ogrodzeniu">
+    </div>
+    <div>
+      <p class="kicker">Drugi filar stajni</p>
+      <h2>Hipoterapia</h2>
+      <p>Koń nie ocenia. Jego ciepło, miarowy krok i spokojna obecność działają tam,
+      gdzie słowa często nie wystarczają. Hipoterapia wspiera rozwój ruchowy,
+      koordynację i równowagę, a jednocześnie buduje poczucie bezpieczeństwa i więź.</p>
+      <p style="margin-top:16px">Zajęcia prowadzimy indywidualnie, w oparciu o potrzeby uczestnika —
+      skontaktuj się z nami, aby porozmawiać o możliwościach i terminach.</p>
+      <a class="btn btn-full" href="#kontakt">Zapytaj o hipoterapię</a>
+    </div>
+  </div>
+</section>
+
+<section id="konie">
+  <div class="wrap">
+    <p class="kicker">Nasi nauczyciele cierpliwości</p>
+    <h2>Nasze konie</h2>
+    <p class="lead">Każdy ma swoje imię, swój charakter i swoją historię —
+    poznasz je wszystkie na pierwszej wizycie.</p>
+    <div class="konie-siatka">
+      <div class="kon">
+        <div class="portret"><img src="img/balao-konie-przy-stajni.jpg" alt="Konie odpoczywające przy stajni"></div>
+        <p>Stado czeka na Ciebie w Zakrzewie</p>
+      </div>
+      <div class="kon">
+        <div class="portret"><img src="img/balao-kon-okulary.jpg" alt="Biały koń w okularach przeciwsłonecznych"></div>
+        <p>Poczucie humoru mamy wpisane w DNA</p>
+      </div>
+      <div class="kon">
+        <div class="portret"><img src="img/balao-cover.jpg" alt="Stado koni w cieniu drzew"></div>
+        <p>Konie żyją u nas stadnie, blisko natury</p>
+      </div>
+      <div class="kon">
+        <div class="portret"><img src="img/balao-czarny-kon-plac.jpg" alt="Kary koń przy nowym placu treningowym"></div>
+        <p>Nowy plac do treningów tuż przy lesie</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="psy">
+  <div class="wrap">
+    <div class="naglowek">
+      <p class="kicker">Od psów wszystko się zaczęło</p>
+      <h2>Psy Balao</h2>
+      <p class="lead">Zanim pojawiły się konie, Balao było znaną hodowlą dwóch ras.
+      Prowadzimy ją z tą samą pasją co od początku — pod patronatem Związku
+      Kynologicznego w Polsce (FCI), z rodowodami i psami, które są przede wszystkim
+      częścią rodziny.</p>
+    </div>
+
+    <div class="rasy">
+      <div class="rasa">
+        <div class="foto"><img src="img/dog-chiaro.jpg" alt="Dog niemiecki błękitny hodowli Balao"></div>
+        <div class="tresc">
+          <h3>Dog niemiecki błękitny</h3>
+          <p>Apollo wśród psów — ogromny, dostojny, a przy tym niezwykle łagodny i przywiązany
+          do rodziny. Nasze błękitne dogi to duma hodowli Balao: piękna sylwetka,
+          spokojny charakter i rodowody potwierdzone w ZKwP.</p>
+        </div>
+      </div>
+      <div class="rasa">
+        <div class="foto"><img src="img/dog-forpleasure.jpg" alt="Jack Russell Terrier hodowli Balao"></div>
+        <div class="tresc">
+          <h3>Jack Russell Terrier</h3>
+          <p>Mały, ale z ogromnym temperamentem — energiczny, mądry i nieustraszony towarzysz.
+          Nasze Jacki to psy z charakterem i rodowodem, wychowane w domu, przyzwyczajone
+          do ludzi i innych zwierząt.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="psy-galeria-tytul">Nasze psy</p>
+    <p class="psy-galeria-pod">Kilku naszych wychowanków — każdy z osobowością i własną historią.</p>
+    <div class="psy-galeria">
+      <div class="pies">
+        <div class="portret"><img src="img/dog-ulisses.jpg" alt="Ulisses — dog niemiecki błękitny"></div>
+        <h4>Ulisses</h4><span>Dog niemiecki</span>
+      </div>
+      <div class="pies">
+        <div class="portret"><img src="img/dog-november.jpg" alt="November Rain — dog niemiecki błękitny"></div>
+        <h4>November Rain</h4><span>Dog niemiecki</span>
+      </div>
+      <div class="pies">
+        <div class="portret"><img src="img/dog-ax.jpg" alt="Ax — dog niemiecki błękitny z opiekunką"></div>
+        <h4>Ax</h4><span>Dog niemiecki</span>
+      </div>
+      <div class="pies">
+        <div class="portret"><img src="img/dog-gummie.jpg" alt="Gummie Bear — Jack Russell Terrier"></div>
+        <h4>Gummie Bear</h4><span>Jack Russell</span>
+      </div>
+      <div class="pies">
+        <div class="portret"><img src="img/dog-eyecatcher.jpg" alt="Eye Catcher Glen — Jack Russell Terrier"></div>
+        <h4>Eye Catcher Glen</h4><span>Jack Russell</span>
+      </div>
+      <div class="pies">
+        <div class="portret"><img src="img/dog-flash.jpg" alt="First Flash — Jack Russell Terrier"></div>
+        <h4>First Flash</h4><span>Jack Russell</span>
+      </div>
+    </div>
+
+    <div class="psy-info">
+      <p class="rodowod">Rodowody ZKwP / FCI · szczenięta z domu</p>
+      <h3>Szukasz szczeniaka?</h3>
+      <p>Od czasu do czasu w Balao pojawiają się mioty dogów niemieckich błękitnych
+      i Jack Russell terierów. Jeśli marzysz o psie z tych ras — napisz lub zadzwoń,
+      opowiemy o planowanych i dostępnych szczeniętach.</p>
+      <a class="btn" href="#kontakt">Zapytaj o szczenięta</a>
+    </div>
+  </div>
+</section>
+
+<section id="o-nas">
+  <div class="wrap">
+    <p class="kicker">Nasza historia</p>
+    <h2>Balao — miejsce, które kocha zwierzęta</h2>
+    <p><strong>Balao zaczęło się od psów.</strong> Przez wiele lat pod tą nazwą działała
+    amatorska hodowla <strong>dogów niemieckich błękitnych</strong> i <strong>Jack Russell
+    terierów</strong> — z rodowodami Związku Kynologicznego, sukcesami wystawowymi
+    i szczeniętami, które trafiały do domów w całej Polsce i za granicą.
+    Zwierzęta były u nas zawsze członkami rodziny — nie „inwentarzem".</p>
+    <p>Konie pojawiły się w Balao najpierw jako „inni mieszkańcy" — a potem, jak to konie,
+    zajęły całe serce. Dziś to one są sercem tego miejsca na skraju lasu w Zakrzewie:
+    <strong>Stajnia Balao</strong> to jazda konna, leśne wyprawy i hipoterapia — prowadzone
+    tak, jak kiedyś hodowla: z sercem, spokojem i szacunkiem dla zwierząt.
+    A psy? Psy są z nami cały czas — <a href="#psy" style="color:var(--siano);text-decoration:none;border-bottom:1px solid var(--siano)">poznaj Psy Balao</a>.</p>
+    <p>Stajnię prowadzi <strong>Anna Pyziak</strong> — z końmi i psami związana od zawsze.</p>
+  </div>
+</section>
+
+<section id="opinie">
+  <div class="wrap">
+    <p class="kicker">Co mówią nasi goście</p>
+    <div class="gwiazdki">★★★★★</div>
+    <p class="opinia-duza">„100% osób poleca Stajnię Balao"</p>
+    <p class="zrodlo">— opinie na Facebooku</p>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Zapraszamy</p>
+      <h2>Kontakt</h2>
+      <p>Najlepiej po prostu zadzwoń — ustalimy termin pierwszej wizyty.
+      Możesz też napisać do nas na Facebooku.</p>
+      <ul class="dane">
+        <li><span class="etykieta">Telefon</span><a href="tel:+48601237375">601 237 375</a></li>
+        <li><span class="etykieta">E-mail</span><a href="mailto:balao@balao.pl">balao@balao.pl</a></li>
+        <li><span class="etykieta">Adres</span><span>Zakrzew 24, 26-902 Grabów nad Pilicą<br>(okolice Warki, ok. godziny z Warszawy)</span></li>
+      </ul>
+      <div class="spolecznosci">
+        <a href="https://www.facebook.com/stajniabalao/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="mapa">
+      <iframe title="Mapa dojazdu do Stajni Balao" loading="lazy"
+        src="https://maps.google.com/maps?q=51.78378,21.24301&hl=pl&z=15&output=embed"></iframe>
+      <a class="mapa-link" href="https://www.google.com/maps/place/Stajnia+Balao/@51.7837766,21.2430092,17z" target="_blank" rel="noopener">Otwórz w Google Maps → nawigacja do stajni</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Stajnia Balao · Anna Pyziak · Zakrzew k. Grabowa nad Pilicą</p>
+</footer>
+
+<script>
+const t=document.getElementById('menu-toggle'),m=document.getElementById('menu');
+t.addEventListener('click',()=>m.classList.toggle('otwarte'));
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.remove('otwarte')));
+</script>
+
+</body>
+</html>
