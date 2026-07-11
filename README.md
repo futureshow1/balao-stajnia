@@ -7,9 +7,12 @@ zastępująca starą stronę balao.pl (hodowla psów, frameset z lat 2000).
 oddech, „tu i teraz") + drugi filar: hipoterapia. Oferta dla dzieci
 (oprowadzanki) zachowana, ale nie jest już na pierwszym planie.
 
-## Podgląd lokalny
+## Podgląd
 
-Serwer `balao-stajnia` w `.claude/launch.json` → http://localhost:8155
+- **NA ŻYWO (link dla pani Ani):** https://futureshow1.github.io/balao-stajnia/
+  Repo: github.com/futureshow1/balao-stajnia (konto gh: futureshow1).
+  Aktualizacja: `git push` w tym folderze → Pages przebudowuje się ~1 min.
+- Lokalnie: serwer `balao-stajnia` w `.claude/launch.json` → http://localhost:8155
 
 ## Źródła treści
 
