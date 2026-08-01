@@ -7,7 +7,26 @@ zastępująca starą stronę balao.pl (hodowla psów, frameset z lat 2000).
 oddech, „tu i teraz") + drugi filar: hipoterapia. Oferta dla dzieci
 (oprowadzanki) zachowana, ale nie jest już na pierwszym planie.
 
-## Dwie wersje (prezentacja dwuetapowa dla pani Ani)
+## v3 — WERSJA WG NAGRANIA PANI ANI (2026-08-01) ★ AKTUALNA
+
+Zbudowana wg transkrypcji rozmowy (mobile-workspace, branch
+claude/transkrypcja-zmiany-strony-ani-i2b2fl, plik
+transkrypcja-nagranie-92-zmiany-strony.md):
+
+- **https://futureshow1.github.io/balao-stajnia/v3/** — BRAMA: logo na górze,
+  dwa klikalne obrazki (pies → psy.html, jeźdźcy → stajnia.html), min. tekstu
+- **v3/psy.html** — świat psów: Duże szwajcarskie psy pasterskie (obecne psy,
+  PLACEHOLDER na zdjęcia — potrzebne od pani Ani), Jack Russelle (aktualne,
+  stare zdjęcia z balao.pl), wspólna sekcja HISTORIA (dogi niemieckie błękitne
+  + buldogi francuskie, LATA „…–…" DO UZUPEŁNIENIA przez panią Anię)
+- **v3/stajnia.html** — świat koni: strona etapu 1 + sekcja „samochwałka"
+  (#instruktorka): instruktorka jazdy, hipoterapeutka, II klasa sportowa,
+  licencje; NA ZDJĘCIE czeka slot (wziąć „już zaakceptowane" zdjęcie z jej
+  profilu FB); „PZJ" z nagrania niepewne — na stronie ogólnie „licencje
+  sportowe", potwierdzić z panią Anią
+- Dwa światy się nie łączą (życzenie z nagrania); mapa = Google embed
+
+## Dwie wersje (prezentacja dwuetapowa dla pani Ani — starsze)
 
 - **ETAP 1 — konie / kobiety 40+ / hipoterapia** (bez psów):
   https://futureshow1.github.io/balao-stajnia/  (plik `index.html`)
