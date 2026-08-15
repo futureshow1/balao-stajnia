@@ -25,20 +25,21 @@ body{font-family:'Jost',sans-serif;color:var(--tekst);background:var(--krem);min
 .brama-logo .pod{margin-top:8px;font-size:.8rem;text-transform:uppercase;letter-spacing:.34em;color:var(--tekst-jasny)}
 .brama-logo .kreska{width:64px;height:2px;background:var(--siano);margin:18px auto 0}
 
-/* DWA ŚWIATY */
-.swiaty{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:62vh}
-.swiat{display:flex;flex-direction:column;text-decoration:none;overflow:hidden}
-.swiat .foto{position:relative;flex:1;min-height:340px;overflow:hidden}
+/* DWA ŚWIATY — wspólna siatka: rząd 1 = zdjęcia, rząd 2 = pasy (zawsze równe) */
+.swiaty{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:0;min-height:62vh}
+.swiat{display:contents;text-decoration:none}
+.swiat .foto{position:relative;grid-row:1;min-height:360px;overflow:hidden}
+.swiat:first-child .foto,.swiat:first-child .pas{grid-column:1}
+.swiat-stajnia .foto,.swiat-stajnia .pas{grid-column:2}
 .swiat .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .swiat:hover .foto img{transform:scale(1.05)}
 .swiat .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(24,38,29,.38) 0%,transparent 30%)}
 .swiat .etykieta{position:absolute;top:22px;left:0;right:0;text-align:center;z-index:2;font-size:.78rem;text-transform:uppercase;letter-spacing:.3em;color:rgba(250,246,238,.95)}
-.pas{background:var(--las-ciemny);color:var(--krem);text-align:center;padding:28px 26px 32px}
+.pas{grid-row:2;background:var(--las-ciemny);color:var(--krem);text-align:center;padding:28px 26px 32px;display:flex;flex-direction:column;align-items:center}
 .swiat:first-child .pas{border-right:1px solid rgba(250,246,238,.12)}
 .swiat h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:500;margin-bottom:8px}
-.swiat p{font-size:.95rem;font-weight:300;color:rgba(250,246,238,.75);margin:0 auto 20px;line-height:1.6;max-width:400px}
-.swiat .btn{display:inline-block;padding:13px 34px;border-radius:2px;font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;font-weight:500;background:var(--siano);color:var(--las-ciemny);transition:background .25s}
-.swiat:hover .btn{background:var(--siano-jasne)}
+.swiat p{font-size:.95rem;font-weight:300;color:rgba(250,246,238,.75);margin:0 0 20px;line-height:1.6;max-width:400px}
+.swiat .btn{display:inline-block;margin-top:auto;padding:13px 34px;border-radius:2px;font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;font-weight:500;background:var(--siano);color:var(--las-ciemny)}
 
 /* STOPKA */
 footer{background:var(--las-ciemny);color:rgba(250,246,238,.75);text-align:center;padding:22px 20px;font-size:.85rem}
@@ -46,8 +47,9 @@ footer a{color:var(--siano-jasne);text-decoration:none}
 footer .dane{letter-spacing:.04em}
 
 @media(max-width:760px){
-  .swiaty{grid-template-columns:1fr;min-height:auto}
-  .swiat .foto{min-height:44vh;flex:none}
+  .swiaty{grid-template-columns:1fr;grid-template-rows:none;min-height:auto;display:flex;flex-direction:column}
+  .swiat{display:flex;flex-direction:column}
+  .swiat .foto{min-height:44vh}
   .swiat p{display:none}
   .pas{padding:22px 24px 26px}
   .swiat:first-child .pas{border-right:none}
@@ -73,8 +75,8 @@ footer .dane{letter-spacing:.04em}
     </div>
     <div class="pas">
       <h2>Psy Balao</h2>
-      <p>Duże szwajcarskie psy pasterskie i Jack Russell teriery.
-      Rodowody, szczenięta i ponad dwadzieścia lat hodowlanej pasji.</p>
+      <p>Duże szwajcarskie psy pasterskie i Jack Russell teriery —
+      rodowody i szczenięta z domowej hodowli.</p>
       <span class="btn">Wejdź do hodowli</span>
     </div>
   </a>
