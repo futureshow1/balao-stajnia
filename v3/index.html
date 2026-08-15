@@ -27,17 +27,18 @@ body{font-family:'Jost',sans-serif;color:var(--tekst);background:var(--krem);min
 
 /* DWA ŚWIATY */
 .swiaty{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:62vh}
-.swiat{position:relative;display:flex;align-items:flex-end;justify-content:center;text-decoration:none;overflow:hidden;min-height:420px}
-.swiat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.swiat:hover img{transform:scale(1.05)}
-.swiat::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(24,38,29,.82) 0%,rgba(24,38,29,.25) 45%,rgba(24,38,29,.05) 70%);transition:background .4s}
-.swiat:hover::after{background:linear-gradient(to top,rgba(24,38,29,.9) 0%,rgba(24,38,29,.35) 50%,rgba(24,38,29,.1) 75%)}
-.swiat .tresc{position:relative;z-index:2;text-align:center;color:var(--krem);padding:22px 28px 26px;margin:0 20px 34px;max-width:460px;background:rgba(24,38,29,.78);border-radius:2px;backdrop-filter:blur(3px)}
-.swiat h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:500;margin-bottom:10px}
-.swiat p{font-size:.98rem;font-weight:300;color:rgba(250,246,238,.88);margin-bottom:22px;line-height:1.6}
+.swiat{display:flex;flex-direction:column;text-decoration:none;overflow:hidden}
+.swiat .foto{position:relative;flex:1;min-height:340px;overflow:hidden}
+.swiat .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.swiat:hover .foto img{transform:scale(1.05)}
+.swiat .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(24,38,29,.38) 0%,transparent 30%)}
+.swiat .etykieta{position:absolute;top:22px;left:0;right:0;text-align:center;z-index:2;font-size:.78rem;text-transform:uppercase;letter-spacing:.3em;color:rgba(250,246,238,.95)}
+.pas{background:var(--las-ciemny);color:var(--krem);text-align:center;padding:28px 26px 32px}
+.swiat:first-child .pas{border-right:1px solid rgba(250,246,238,.12)}
+.swiat h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:500;margin-bottom:8px}
+.swiat p{font-size:.95rem;font-weight:300;color:rgba(250,246,238,.75);margin:0 auto 20px;line-height:1.6;max-width:400px}
 .swiat .btn{display:inline-block;padding:13px 34px;border-radius:2px;font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;font-weight:500;background:var(--siano);color:var(--las-ciemny);transition:background .25s}
 .swiat:hover .btn{background:var(--siano-jasne)}
-.swiat .etykieta{position:absolute;top:26px;left:0;right:0;text-align:center;z-index:2;font-size:.78rem;text-transform:uppercase;letter-spacing:.3em;color:rgba(250,246,238,.9)}
 
 /* STOPKA */
 footer{background:var(--las-ciemny);color:rgba(250,246,238,.75);text-align:center;padding:22px 20px;font-size:.85rem}
@@ -46,7 +47,10 @@ footer .dane{letter-spacing:.04em}
 
 @media(max-width:760px){
   .swiaty{grid-template-columns:1fr;min-height:auto}
-  .swiat{min-height:46vh}
+  .swiat .foto{min-height:44vh;flex:none}
+  .swiat p{display:none}
+  .pas{padding:22px 24px 26px}
+  .swiat:first-child .pas{border-right:none}
   .swiat-stajnia{order:-1}
 }
 </style>
@@ -63,9 +67,11 @@ footer .dane{letter-spacing:.04em}
 <div class="swiaty">
 
   <a class="swiat" href="psy.html">
-    <span class="etykieta">Hodowla psów</span>
-    <img src="img/dog-tile.jpg?v=2" alt="Jack Russell Terrier hodowli Balao na trawie">
-    <div class="tresc">
+    <div class="foto">
+      <span class="etykieta">Hodowla psów</span>
+      <img src="img/dog-tile.jpg?v=2" alt="Jack Russell Terrier hodowli Balao na trawie">
+    </div>
+    <div class="pas">
       <h2>Psy Balao</h2>
       <p>Duże szwajcarskie psy pasterskie i Jack Russell teriery.
       Rodowody, szczenięta i ponad dwadzieścia lat hodowlanej pasji.</p>
@@ -74,9 +80,11 @@ footer .dane{letter-spacing:.04em}
   </a>
 
   <a class="swiat swiat-stajnia" href="stajnia.html">
-    <span class="etykieta">Jazda konna</span>
-    <img src="img/balao-jezdzczyni-pomarancz.jpg" alt="Jeźdźczyni na gniadym koniu na tle lasu — Stajnia Balao">
-    <div class="tresc">
+    <div class="foto">
+      <span class="etykieta">Jazda konna</span>
+      <img src="img/balao-jezdzczyni-pomarancz.jpg" alt="Jeźdźczyni na gniadym koniu na tle lasu — Stajnia Balao">
+    </div>
+    <div class="pas">
       <h2>Stajnia Balao</h2>
       <p>Witamy w stajni! Nauka jazdy konnej, przejażdżki po lesie,
       oprowadzanki dla najmłodszych i hipoterapia.</p>
