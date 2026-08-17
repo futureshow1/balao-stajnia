@@ -46,6 +46,15 @@ dogi błękitne (Chiaro, Ulisses, November Rain, Ax) + Jack Russelle
 (For Pleasure, Gummie Bear, Eye Catcher Glen, First Flash). Do potwierdzenia
 przez panią Anię: czy hodowla nadal aktywna, aktualne psy/mioty, nowsze foto.
 
+## Datowanie hodowli (wyprowadzone ze starej strony — DO POTWIERDZENIA z p. Anią)
+
+Dogi niemieckie: wpisano **2001–2009** na podstawie dat udokumentowanych na
+balao.pl: Izydor ur. 05.06.2001 (pierwszy pies), miot P 20.08.2002, mioty
+I (28.05.2007) i J (28.11.2007), Jarod ur. 08.06.2009 (ostatni pies).
+Buldogi francuskie: stara strona NIE zawiera żadnych dat (puste szablony) —
+zostaje „w latach …–…" do uzupełnienia przez panią Anię.
+Jacki: miot X 15.05.2003 (ojciec Leszcz, matka Jaga Baba Półdiable).
+
 ## Czekamy na materiały od pani Ani (mail-lista wysłana z Gmaila Jana)
 
 Zdjęcia na kafle bramy (koń+jeździec, pies — poziome), daty hodowli dogów
