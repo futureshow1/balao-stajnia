@@ -46,6 +46,14 @@ dogi błękitne (Chiaro, Ulisses, November Rain, Ax) + Jack Russelle
 (For Pleasure, Gummie Bear, Eye Catcher Glen, First Flash). Do potwierdzenia
 przez panią Anię: czy hodowla nadal aktywna, aktualne psy/mioty, nowsze foto.
 
+## Czekamy na materiały od pani Ani (mail-lista wysłana z Gmaila Jana)
+
+Zdjęcia na kafle bramy (koń+jeździec, pies — poziome), daty hodowli dogów
+i buldogów, portret pani Ani (samochwałka), pełna lista osiągnięć jeździeckich,
+imiona koni, podpisy 8 suk w Historii, SZERSZA pula zdjęć do wyboru,
+opis współczesnego doga (img/dog-portret.jpg, img/dog-wspolczesny-pion.jpg —
+jeszcze nieużyte), Instagram, cennik. Kafle bramy wymienimy po otrzymaniu zdjęć.
+
 ## Źródła treści
 
 - stara strona balao.pl: kontakt (Anna Pyziak, Zakrzew 24, 26-902 Grabów nad
