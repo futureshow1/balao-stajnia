@@ -87,15 +87,18 @@ h2{font-size:clamp(1.9rem,4vw,2.9rem);color:var(--szafir);margin-bottom:24px}
 #historia .naglowek .lead{color:rgba(250,246,238,.82);margin:0 auto}
 .era-tytul{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--siano-jasne);margin:64px 0 6px;text-align:center}
 .era-pod{text-align:center;color:rgba(250,246,238,.65);font-size:.92rem;margin-bottom:36px}
-.profile{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
-.profil{background:rgba(20,31,68,.55);border:1px solid rgba(250,246,238,.14);border-radius:2px;display:flex;overflow:hidden}
-.profil .foto{flex:0 0 132px;background:rgba(250,246,238,.06)}
-.profil .foto img{width:100%;height:100%;object-fit:cover}
-.profil .dane{padding:18px 20px}
-.profil h3{font-size:1.2rem;line-height:1.25;margin-bottom:4px}
-.profil .meta{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--siano-jasne);margin-bottom:10px}
-.profil ul{list-style:none;font-size:.85rem;color:rgba(250,246,238,.82);line-height:1.5}
-.profil ul li::before{content:"◆ ";color:var(--siano);font-size:.6rem;vertical-align:middle}
+.profile{display:grid;grid-template-columns:repeat(3,1fr);gap:72px 48px;margin-top:12px}
+.profil{display:block}
+.profil .foto{aspect-ratio:3/4;overflow:hidden;border-radius:2px;margin-bottom:20px}
+.profil .foto img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.profil:hover .foto img{transform:scale(1.03)}
+.profil .dane{padding:0}
+.profil h3{font-size:1.35rem;line-height:1.25;margin-bottom:8px}
+.profil h3::after{content:"";display:block;width:36px;height:2px;background:var(--siano);margin-top:10px}
+.profil .meta{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:var(--siano-jasne);margin:12px 0 10px}
+.profil ul{list-style:none;font-size:.9rem;color:rgba(250,246,238,.78);line-height:1.75}
+@media(max-width:1000px){.profile{grid-template-columns:1fr 1fr;gap:56px 32px}}
+@media(max-width:600px){.profile{grid-template-columns:1fr;gap:48px}}
 .suki-galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px}
 .suki-galeria .kadr{aspect-ratio:1;border-radius:2px;overflow:hidden;background:rgba(250,246,238,.06)}
 .suki-galeria img{width:100%;height:100%;object-fit:cover}
@@ -225,81 +228,10 @@ footer a{color:rgba(250,246,238,.6)}
     </div>
 
     <p class="era-tytul">Dogi niemieckie błękitne</p>
-    <p class="era-pod">hodowane w latach …–… · profile naszych championów</p>
-    <div class="profile">
-      <div class="profil">
-        <div class="foto"><img src="img/old-leon_11.jpg" alt="Izydor — dog niemiecki błękitny"></div>
-        <div class="dane">
-          <h3>IZYDOR</h3>
-          <p class="meta">2001–2007 · maść błękitna · HD-A</p>
-          <ul>
-            <li>Interchampion</li>
-            <li>Champion Polski</li>
-            <li>Zwycięzca Klubu i Zwycięzca Polski 2004</li>
-            <li>Młodzieżowy Champion i Zwycięzca Polski '02</li>
-          </ul>
-        </div>
-      </div>
-      <div class="profil">
-        <div class="foto"><img src="img/old-quixote2006.jpg" alt="Quixote del Regno di Fantasia — dog niemiecki błękitny"></div>
-        <div class="dane">
-          <h3>QUIXOTE del Regno di Fantasia</h3>
-          <p class="meta">2004–2009 · maść błękitna · HD-B</p>
-          <ul>
-            <li>Interchampion</li>
-            <li>Champion Polski i Champion Węgier</li>
-            <li>OKV Bundessieger '06</li>
-            <li>Mł. Zwycięzca Klubu Węgier '05</li>
-          </ul>
-        </div>
-      </div>
-      <div class="profil">
-        <div class="foto"><img src="img/dog-chiaro.jpg?v=2" alt="Out of Law Billy the Kid Balao — dog niemiecki błękitny"></div>
-        <div class="dane">
-          <h3>OUT OF LAW BILLY THE KID Balao</h3>
-          <p class="meta">ur. 2003 · maść błękitna</p>
-          <ul>
-            <li>Champion Polski</li>
-            <li>Młodzieżowy Zwycięzca Klubu '04</li>
-            <li>Młodzieżowy Zwycięzca Polski '04</li>
-            <li>Młodzieżowy Champion Polski</li>
-          </ul>
-        </div>
-      </div>
-      <div class="profil">
-        <div class="foto"><img src="img/dog-ulisses.jpg?v=2" alt="Personal Effect Picador Balao — dog niemiecki błękitny"></div>
-        <div class="dane">
-          <h3>PERSONAL EFFECT PICADOR Balao</h3>
-          <p class="meta">ur. 2002 · maść błękitna · dom: Finlandia</p>
-          <ul>
-            <li>Champion Estonii</li>
-            <li>Champion Litwy</li>
-            <li>Champion Łotwy</li>
-          </ul>
-        </div>
-      </div>
-      <div class="profil">
-        <div class="foto"><img src="img/dog-ax.jpg?v=2" alt="Nothing Else Matters Balao — dog niemiecki błękitny"></div>
-        <div class="dane">
-          <h3>NOTHING ELSE MATTERS Balao</h3>
-          <p class="meta">ur. 2005 · maść błękitna</p>
-          <ul>
-            <li>Młodzieżowy Champion Polski</li>
-          </ul>
-        </div>
-      </div>
-      <div class="profil">
-        <div class="foto"><img src="img/dog-november.jpg?v=2" alt="November Rain Balao — dog niemiecki błękitny"></div>
-        <div class="dane">
-          <h3>NOVEMBER RAIN Balao</h3>
-          <p class="meta">2005–2008 · maść błękitna</p>
-          <ul>
-            <li>Młodzieżowy Champion Polski</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
+    <p class="era-pod">hodowane w latach …–…</p>
+    <p class="era-tekst">Interchampiony, championy Polski i Europy, psy badane (HD)
+    i wystawiane od Warszawy po Budapeszt — poznaj psy, które zbudowały markę Balao.</p>
+    <p style="text-align:center;margin-top:26px"><a class="btn" href="championy.html">Profile championów</a></p>
     <p class="era-tytul">Nasze suki</p>
     <p class="era-tekst">Za każdym championem stoi znakomita matka. Suki były fundamentem
     hodowli Balao — zebraliśmy ich portrety w osobnej galerii.</p>
