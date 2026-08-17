@@ -4,15 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Psy Balao — duże szwajcarskie psy pasterskie i Jack Russell teriery | Zakrzew k. Warki</title>
-<meta name="description" content="Hodowla Balao: duże szwajcarskie psy pasterskie i Jack Russell teriery z rodowodami. Wcześniej — przez lata — dogi niemieckie błękitne i buldogi francuskie.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%232e4636'/%3E%3Ctext x='50' y='72' font-size='60' text-anchor='middle'%3E%F0%9F%90%95%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Hodowla Balao: duże szwajcarskie psy pasterskie i Jack Russell teriery z rodowodami ZKwP/FCI. Championaty, badania, ponad dwie dekady doświadczenia — wcześniej dogi niemieckie błękitne i buldogi francuskie.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23213567'/%3E%3Ctext x='50' y='72' font-size='60' text-anchor='middle'%3E%F0%9F%90%95%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --las:#2e4636;--las-ciemny:#1f3226;--siano:#c99a62;--siano-jasne:#e8d5b5;
-  --krem:#faf6ee;--krem-ciemny:#f1e9da;--tekst:#33302a;--tekst-jasny:#6d675c;
+  --szafir:#213567;         /* szafirowy granat — barwa błękitnych dogów i starego Balao */
+  --szafir-ciemny:#141F44;
+  --szafir-jasny:#33508f;
+  --siano:#c99a62;--siano-jasne:#e8d5b5;
+  --krem:#faf6ee;--krem-ciemny:#eef0f5;
+  --tekst:#2a2d38;--tekst-jasny:#5e6373;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -22,82 +26,97 @@ img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,246,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(46,70,54,.12)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,246,238,.93);backdrop-filter:blur(8px);border-bottom:1px solid rgba(33,53,103,.14)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;letter-spacing:.06em;color:var(--las);text-decoration:none}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;letter-spacing:.06em;color:var(--szafir);text-decoration:none}
 .logo span{color:var(--siano)}
-.menu{display:flex;gap:28px;list-style:none}
+.menu{display:flex;gap:26px;list-style:none}
 .menu a{text-decoration:none;font-size:.82rem;text-transform:uppercase;letter-spacing:.14em;font-weight:400;color:var(--tekst);transition:color .2s}
 .menu a:hover{color:var(--siano)}
-.menu a.cta{color:var(--las);font-weight:600}
-#menu-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--las);cursor:pointer}
+.menu a.cta{color:var(--szafir);font-weight:600}
+#menu-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--szafir);cursor:pointer}
 
-header{min-height:72vh;display:flex;flex-direction:column;justify-content:center;position:relative;
-  background:linear-gradient(rgba(24,38,29,.5),rgba(24,38,29,.72)),
-  url('img/dog-flash.jpg?v=2') center 30%/cover no-repeat,
-  linear-gradient(160deg,var(--las-ciemny),var(--las));color:var(--krem)}
+header{min-height:74vh;display:flex;flex-direction:column;justify-content:center;position:relative;
+  background:linear-gradient(rgba(20,31,68,.5),rgba(20,31,68,.78)),
+  url('img/szczeniaki-niebo.jpg') center 40%/cover no-repeat,
+  linear-gradient(160deg,var(--szafir-ciemny),var(--szafir));color:var(--krem)}
 .hero-inner{position:relative;z-index:2;padding:120px 24px 80px;max-width:860px;margin:0 auto;text-align:center}
 .hero-kicker{text-transform:uppercase;letter-spacing:.3em;font-size:.8rem;color:var(--siano-jasne);margin-bottom:22px}
 h1{font-size:clamp(2.2rem,5.5vw,4rem);margin-bottom:14px}
 h1 em{font-style:italic;color:var(--siano-jasne)}
-.hero-sub{font-size:clamp(1rem,2vw,1.25rem);max-width:600px;margin:16px auto 36px;color:rgba(250,246,238,.85)}
-.btn{display:inline-block;padding:14px 36px;border-radius:2px;text-decoration:none;font-size:.85rem;text-transform:uppercase;letter-spacing:.16em;font-weight:500;background:var(--siano);color:var(--las-ciemny);transition:background .25s}
+.hero-sub{font-size:clamp(1rem,2vw,1.25rem);max-width:620px;margin:16px auto 36px;color:rgba(250,246,238,.87)}
+.btn{display:inline-block;padding:14px 36px;border-radius:2px;text-decoration:none;font-size:.85rem;text-transform:uppercase;letter-spacing:.16em;font-weight:500;background:var(--siano);color:var(--szafir-ciemny);transition:background .25s}
 .btn:hover{background:var(--siano-jasne)}
 
 section{padding:96px 0}
 .kicker{text-transform:uppercase;letter-spacing:.28em;font-size:.78rem;color:var(--siano);margin-bottom:14px}
-h2{font-size:clamp(1.9rem,4vw,2.9rem);color:var(--las);margin-bottom:24px}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);color:var(--szafir);margin-bottom:24px}
 .lead{font-size:1.15rem;color:var(--tekst-jasny);max-width:640px}
 
-/* rasa: dwie kolumny foto+tekst */
+/* Szwajcary */
 .rasa-uklad{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.rasa-foto{aspect-ratio:4/3;border-radius:2px;overflow:hidden;background:linear-gradient(155deg,var(--krem-ciemny),var(--siano-jasne));position:relative;display:flex;align-items:center;justify-content:center}
+.rasa-foto{aspect-ratio:4/5;border-radius:2px;overflow:hidden;position:relative}
 .rasa-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.rasa-foto .podpis{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tekst-jasny)}
-.rasa-foto svg{width:40%;opacity:.4}
 .cechy{list-style:none;margin-top:24px}
-.cechy li{padding:10px 0;border-bottom:1px solid var(--krem-ciemny);font-size:.98rem;color:var(--tekst-jasny)}
+.cechy li{padding:10px 0;border-bottom:1px solid #e4e0d5;font-size:.98rem;color:var(--tekst-jasny)}
 .cechy li strong{color:var(--tekst);font-weight:500}
+.duet{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.duet .kadr{aspect-ratio:3/2;border-radius:2px;overflow:hidden}
+.duet img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.duet .kadr:hover img{transform:scale(1.04)}
 
-#szwajcary{background:var(--krem)}
+/* Jacki */
 #jacki{background:var(--krem-ciemny)}
+#jacki .naglowek{text-align:center;max-width:680px;margin:0 auto 52px}
+#jacki .naglowek .lead{margin:0 auto}
+.karty-jacki{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.kj{background:var(--krem);border-radius:2px;overflow:hidden;border-top:3px solid var(--siano);display:flex;flex-direction:column}
+.kj .kadr{aspect-ratio:4/3;overflow:hidden}
+.kj .kadr img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.kj:hover .kadr img{transform:scale(1.04)}
+.kj .tresc{padding:22px 24px 26px}
+.kj h3{font-size:1.45rem;color:var(--szafir);margin-bottom:8px}
+.kj p{font-size:.92rem;color:var(--tekst-jasny)}
 
-.mini-galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:40px}
-.mini-galeria figure{margin:0;text-align:center}
-.mini-galeria .kadr{aspect-ratio:1;border-radius:2px;overflow:hidden;background:var(--krem)}
-.mini-galeria img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-.mini-galeria figure:hover img{transform:scale(1.05)}
-.mini-galeria figcaption{margin-top:8px;font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--las)}
-
-/* Historia */
-#historia{background:var(--las);color:var(--krem)}
+/* Historia — profile championów */
+#historia{background:var(--szafir);color:var(--krem)}
 #historia h2,#historia h3{color:var(--krem)}
 #historia .kicker{color:var(--siano-jasne)}
-#historia .lead{color:rgba(250,246,238,.8);margin:0 auto 56px;text-align:center}
-#historia .naglowek{text-align:center;max-width:660px;margin:0 auto}
-.era{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:44px 0;border-top:1px solid rgba(250,246,238,.18);align-items:start}
-.era:last-of-type{border-bottom:1px solid rgba(250,246,238,.18)}
-.era .lata{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--siano-jasne);line-height:1.3}
-.era h3{font-size:1.6rem;margin-bottom:10px}
-.era p{color:rgba(250,246,238,.82);max-width:640px}
-.era .galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-top:22px;max-width:640px}
-.era .galeria .kadr{aspect-ratio:1;border-radius:2px;overflow:hidden;background:rgba(250,246,238,.08)}
-.era .galeria img{width:100%;height:100%;object-fit:cover}
+#historia .naglowek{text-align:center;max-width:700px;margin:0 auto 60px}
+#historia .naglowek .lead{color:rgba(250,246,238,.82);margin:0 auto}
+.era-tytul{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--siano-jasne);margin:64px 0 6px;text-align:center}
+.era-pod{text-align:center;color:rgba(250,246,238,.65);font-size:.92rem;margin-bottom:36px}
+.profile{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.profil{background:rgba(20,31,68,.55);border:1px solid rgba(250,246,238,.14);border-radius:2px;display:flex;overflow:hidden}
+.profil .foto{flex:0 0 132px;background:rgba(250,246,238,.06)}
+.profil .foto img{width:100%;height:100%;object-fit:cover}
+.profil .dane{padding:18px 20px}
+.profil h3{font-size:1.2rem;line-height:1.25;margin-bottom:4px}
+.profil .meta{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--siano-jasne);margin-bottom:10px}
+.profil ul{list-style:none;font-size:.85rem;color:rgba(250,246,238,.82);line-height:1.5}
+.profil ul li::before{content:"◆ ";color:var(--siano);font-size:.6rem;vertical-align:middle}
+.suki-galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px}
+.suki-galeria .kadr{aspect-ratio:1;border-radius:2px;overflow:hidden;background:rgba(250,246,238,.06)}
+.suki-galeria img{width:100%;height:100%;object-fit:cover}
+.era-tekst{max-width:640px;margin:0 auto;text-align:center;color:rgba(250,246,238,.82)}
 
 /* Kontakt */
-#kontakt{background:var(--las-ciemny);color:var(--krem);text-align:center}
+#kontakt{background:var(--szafir-ciemny);color:var(--krem);text-align:center}
 #kontakt h2{color:var(--krem)}
 #kontakt .kicker{color:var(--siano-jasne)}
 #kontakt p{color:rgba(250,246,238,.85);max-width:560px;margin:0 auto 8px}
-.dane-linia{margin-top:28px;font-size:1.05rem}
+.dane-linia{margin-top:28px;font-size:1.15rem}
 .dane-linia a{color:var(--siano-jasne);text-decoration:none}
+.dane-info{margin-top:18px;font-size:.85rem;color:rgba(250,246,238,.6)}
+.dane-info a{color:rgba(250,246,238,.8)}
 
-footer{background:var(--las-ciemny);color:rgba(250,246,238,.45);text-align:center;padding:28px 24px;font-size:.8rem;border-top:1px solid rgba(250,246,238,.1)}
+footer{background:var(--szafir-ciemny);color:rgba(250,246,238,.45);text-align:center;padding:28px 24px;font-size:.8rem;border-top:1px solid rgba(250,246,238,.1)}
 footer a{color:rgba(250,246,238,.6)}
 
 @media(max-width:860px){
   .rasa-uklad{grid-template-columns:1fr;gap:36px}
-  .era{grid-template-columns:1fr;gap:12px;padding:36px 0}
+  .karty-jacki{grid-template-columns:1fr}
+  .profil .foto{flex-basis:110px}
   section{padding:72px 0}
   .menu{position:fixed;top:64px;right:0;background:var(--krem);flex-direction:column;padding:24px 32px;gap:18px;transform:translateX(100%);transition:transform .3s;box-shadow:-8px 0 30px rgba(0,0,0,.1)}
   .menu.otwarte{transform:translateX(0)}
@@ -124,9 +143,10 @@ footer a{color:rgba(250,246,238,.6)}
 <header>
   <div class="hero-inner">
     <p class="hero-kicker">Hodowla Balao · Zakrzew koło Warki</p>
-    <h1>Psy, które są<br><em>częścią rodziny.</em></h1>
+    <h1>Psy z rodowodem.<br><em>I z sercem.</em></h1>
     <p class="hero-sub">Duże szwajcarskie psy pasterskie i Jack Russell teriery —
-    hodowane z sercem, z rodowodami, w domu pełnym zwierząt.</p>
+    ponad dwie dekady hodowli pod patronatem ZKwP/FCI: championy, przebadani rodzice,
+    szczenięta wychowane w domu.</p>
     <a class="btn" href="#szwajcary">Poznaj nasze psy</a>
   </div>
 </header>
@@ -134,11 +154,7 @@ footer a{color:rgba(250,246,238,.6)}
 <section id="szwajcary">
   <div class="wrap rasa-uklad">
     <div class="rasa-foto">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#2e4636" stroke-width="1.6" stroke-linecap="round">
-        <path d="M25 78 C24 64 26 54 34 48 C40 43 40 36 44 30 C47 25 53 23 58 26 C62 28 63 33 67 36 C72 39 77 40 76 46 C75 51 69 51 64 49 C59 47 56 44 53 48 C50 52 53 60 54 66 C55 72 54 76 53 78"/>
-        <path d="M34 78 C34 70 36 64 40 60"/>
-      </svg>
-      <p class="podpis">miejsce na zdjęcia Waszych szwajcarów</p>
+      <img src="img/szwajcar-pion.jpg" alt="Duży szwajcarski pies pasterski hodowli Balao">
     </div>
     <div>
       <p class="kicker">Nasze obecne psy</p>
@@ -151,34 +167,48 @@ footer a{color:rgba(250,246,238,.6)}
         <li><strong>Potrzeby:</strong> codzienne spacery i bliskość rodziny — z nimi odnajdzie się wszędzie</li>
         <li><strong>Rodowody:</strong> hodowla pod patronatem ZKwP / FCI</li>
       </ul>
+      <div class="duet">
+        <div class="kadr"><img src="img/szwajcar-poziom.jpg" alt="Duży szwajcarski pies pasterski w jesiennym świetle"></div>
+        <div class="kadr"><img src="img/szwajcar-poziom2.jpg" alt="Duży szwajcarski pies pasterski — profil"></div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="jacki">
   <div class="wrap">
-    <div class="rasa-uklad">
-      <div>
-        <p class="kicker">Nasze obecne psy</p>
-        <h2>Jack Russell Terrier</h2>
-        <p class="lead">Mały pies z wielkim temperamentem — inteligentny, odważny
-        i niezmordowany towarzysz na każdą przygodę. Jacki towarzyszą Balao od lat:
-        wychowują się w domu, wśród ludzi, koni i innych zwierząt, dzięki czemu są
-        znakomicie zsocjalizowane.</p>
-        <ul class="cechy">
-          <li><strong>Charakter:</strong> energiczny, bystry, wierny</li>
-          <li><strong>Dla kogo:</strong> dla aktywnych — Jack nudzić się nie lubi</li>
-          <li><strong>Rodowody:</strong> ZKwP / FCI, szczenięta z domowej hodowli</li>
-        </ul>
-      </div>
-      <div class="rasa-foto">
-        <img src="img/dog-forpleasure.jpg?v=2" alt="Jack Russell Terrier hodowli Balao na piasku">
-      </div>
+    <div class="naglowek">
+      <p class="kicker">Nasze obecne psy</p>
+      <h2>Jack Russell Terrier</h2>
+      <p class="lead">Jacki towarzyszą Balao od ponad dwudziestu lat. Nasza linia wyrosła
+      z importowanych championów — psów takich jak For Pleasure of the Hunters Pride
+      (Champion Polski) czy Eye Catcher Glen vd Ansjoros (Holandia).</p>
     </div>
-    <div class="mini-galeria">
-      <figure><div class="kadr"><img src="img/dog-gummie.jpg?v=2" alt="Gummie Bear"></div><figcaption>Gummie Bear</figcaption></figure>
-      <figure><div class="kadr"><img src="img/dog-eyecatcher.jpg?v=2" alt="Eye Catcher Glen"></div><figcaption>Eye Catcher Glen</figcaption></figure>
-      <figure><div class="kadr"><img src="img/dog-flash.jpg?v=2" alt="First Flash"></div><figcaption>First Flash</figcaption></figure>
+    <div class="karty-jacki">
+      <div class="kj">
+        <div class="kadr"><img src="img/dog-forpleasure.jpg?v=2" alt="Pies Jack Russell Terrier hodowli Balao"></div>
+        <div class="tresc">
+          <h3>Psy</h3>
+          <p>Nasze reproduktory — psy z championskimi rodowodami, badane
+          i wystawiane. Silne, zdrowe, o znakomitym charakterze.</p>
+        </div>
+      </div>
+      <div class="kj">
+        <div class="kadr"><img src="img/old-whoopie.jpg" alt="Suka Jack Russell Terrier hodowli Balao"></div>
+        <div class="tresc">
+          <h3>Suki</h3>
+          <p>Serce hodowli. Nasze suki łączą rodowodową jakość z cudownym,
+          rodzinnym temperamentem — to po nich szczenięta dziedziczą charakter.</p>
+        </div>
+      </div>
+      <div class="kj">
+        <div class="kadr"><img src="img/szczeniaki-niebo.jpg" alt="Szczenięta Jack Russell Terrier hodowli Balao na tle nieba"></div>
+        <div class="tresc">
+          <h3>Szczenięta</h3>
+          <p>Rodzą się i wychowują w domu, wśród ludzi i zwierząt. Do nowych domów
+          wyjeżdżają zaszczepione, odrobaczone, z metryką ZKwP.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -186,37 +216,106 @@ footer a{color:rgba(250,246,238,.6)}
 <section id="historia">
   <div class="wrap">
     <div class="naglowek">
-      <p class="kicker">Ponad dwie dekady hodowli</p>
-      <h2>Historia</h2>
-      <p class="lead">Balao to nie tylko psy, które są z nami dziś. Przez lata nasza
-      hodowla wydała na świat dziesiątki wspaniałych psów, które trafiły do domów
-      w Polsce i za granicą.</p>
+      <p class="kicker">Jakość, którą widać w tytułach</p>
+      <h2>Historia hodowli</h2>
+      <p class="lead">Balao to hodowla z dorobkiem: interchampiony, championy Polski
+      i Europy, psy badane (HD), importy z Holandii, wychowankowie w domach od Finlandii
+      po Gruzję. Oto psy, które zbudowały naszą markę.</p>
     </div>
 
-    <div class="era">
-      <div class="lata">w latach<br>…–…</div>
-      <div>
-        <h3>Dogi niemieckie błękitne</h3>
-        <p>Apollo wśród psów. Nasze błękitne dogi zdobywały wystawy i serca —
-        ogromne, dostojne, a przy tym niezwykle łagodne. Dziś to już historia hodowli,
-        z której jesteśmy dumni.</p>
-        <div class="galeria">
-          <div class="kadr"><img src="img/dog-chiaro.jpg?v=2" alt="Dog niemiecki błękitny Chiaro"></div>
-          <div class="kadr"><img src="img/dog-ulisses.jpg?v=2" alt="Dog niemiecki błękitny Ulisses"></div>
-          <div class="kadr"><img src="img/dog-november.jpg?v=2" alt="Dog niemiecki błękitny November Rain"></div>
-          <div class="kadr"><img src="img/dog-ax.jpg?v=2" alt="Dog niemiecki błękitny Ax"></div>
+    <p class="era-tytul">Dogi niemieckie błękitne</p>
+    <p class="era-pod">hodowane w latach …–… · profile naszych championów</p>
+    <div class="profile">
+      <div class="profil">
+        <div class="foto"><img src="img/old-leon_11.jpg" alt="Izydor — dog niemiecki błękitny"></div>
+        <div class="dane">
+          <h3>IZYDOR</h3>
+          <p class="meta">2001–2007 · maść błękitna · HD-A</p>
+          <ul>
+            <li>Interchampion</li>
+            <li>Champion Polski</li>
+            <li>Zwycięzca Klubu i Zwycięzca Polski 2004</li>
+            <li>Młodzieżowy Champion i Zwycięzca Polski '02</li>
+          </ul>
+        </div>
+      </div>
+      <div class="profil">
+        <div class="foto"><img src="img/old-quixote2006.jpg" alt="Quixote del Regno di Fantasia — dog niemiecki błękitny"></div>
+        <div class="dane">
+          <h3>QUIXOTE del Regno di Fantasia</h3>
+          <p class="meta">2004–2009 · maść błękitna · HD-B</p>
+          <ul>
+            <li>Interchampion</li>
+            <li>Champion Polski i Champion Węgier</li>
+            <li>OKV Bundessieger '06</li>
+            <li>Mł. Zwycięzca Klubu Węgier '05</li>
+          </ul>
+        </div>
+      </div>
+      <div class="profil">
+        <div class="foto"><img src="img/dog-chiaro.jpg?v=2" alt="Out of Law Billy the Kid Balao — dog niemiecki błękitny"></div>
+        <div class="dane">
+          <h3>OUT OF LAW BILLY THE KID Balao</h3>
+          <p class="meta">ur. 2003 · maść błękitna</p>
+          <ul>
+            <li>Champion Polski</li>
+            <li>Młodzieżowy Zwycięzca Klubu '04</li>
+            <li>Młodzieżowy Zwycięzca Polski '04</li>
+            <li>Młodzieżowy Champion Polski</li>
+          </ul>
+        </div>
+      </div>
+      <div class="profil">
+        <div class="foto"><img src="img/dog-ulisses.jpg?v=2" alt="Personal Effect Picador Balao — dog niemiecki błękitny"></div>
+        <div class="dane">
+          <h3>PERSONAL EFFECT PICADOR Balao</h3>
+          <p class="meta">ur. 2002 · maść błękitna · dom: Finlandia</p>
+          <ul>
+            <li>Champion Estonii</li>
+            <li>Champion Litwy</li>
+            <li>Champion Łotwy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="profil">
+        <div class="foto"><img src="img/dog-ax.jpg?v=2" alt="Nothing Else Matters Balao — dog niemiecki błękitny"></div>
+        <div class="dane">
+          <h3>NOTHING ELSE MATTERS Balao</h3>
+          <p class="meta">ur. 2005 · maść błękitna</p>
+          <ul>
+            <li>Młodzieżowy Champion Polski</li>
+          </ul>
+        </div>
+      </div>
+      <div class="profil">
+        <div class="foto"><img src="img/dog-november.jpg?v=2" alt="November Rain Balao — dog niemiecki błękitny"></div>
+        <div class="dane">
+          <h3>NOVEMBER RAIN Balao</h3>
+          <p class="meta">2005–2008 · maść błękitna</p>
+          <ul>
+            <li>Młodzieżowy Champion Polski</li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="era">
-      <div class="lata">w latach<br>…–…</div>
-      <div>
-        <h3>Buldogi francuskie</h3>
-        <p>Hodowaliśmy buldogi francuskie — pełne uroku, uparte i kochane pieski
-        do towarzystwa. Ten rozdział również należy już do historii Balao.</p>
-      </div>
+    <p class="era-tytul">Nasze suki</p>
+    <p class="era-pod">fundament hodowli — podpisy uzupełnimy wspólnie z Panią Anią</p>
+    <div class="suki-galeria">
+      <div class="kadr"><img src="img/old-messalina1.jpg" alt="Suka doga niemieckiego hodowli Balao"></div>
+      <div class="kadr"><img src="img/old-jaga4lata.jpg" alt="Suka doga niemieckiego hodowli Balao"></div>
+      <div class="kadr"><img src="img/old-viki_11.jpg" alt="Suka doga niemieckiego hodowli Balao"></div>
+      <div class="kadr"><img src="img/old-lifestyle.jpg" alt="Suka doga niemieckiego hodowli Balao"></div>
+      <div class="kadr"><img src="img/old-nodoubt1.jpg" alt="Suka doga niemieckiego hodowli Balao"></div>
+      <div class="kadr"><img src="img/old-darling_11.jpg" alt="Suka doga niemieckiego hodowli Balao"></div>
+      <div class="kadr"><img src="img/old-michelle.jpg" alt="Suka doga niemieckiego hodowli Balao"></div>
+      <div class="kadr"><img src="img/old-mettalica.jpg" alt="Suka doga niemieckiego hodowli Balao"></div>
     </div>
+
+    <p class="era-tytul">Buldogi francuskie</p>
+    <p class="era-pod">hodowane w latach …–…</p>
+    <p class="era-tekst">Hodowaliśmy również buldogi francuskie — pełne uroku, uparte
+    i kochane pieski do towarzystwa. Ten rozdział także należy już do historii Balao.</p>
   </div>
 </section>
 
@@ -224,13 +323,15 @@ footer a{color:rgba(250,246,238,.6)}
   <div class="wrap">
     <p class="kicker">Hodowla Balao</p>
     <h2>Kontakt</h2>
-    <p>Interesuje Cię szczeniak z naszej hodowli albo chcesz po prostu porozmawiać
-    o psach? Zadzwoń lub napisz.</p>
+    <p>Interesuje Cię szczeniak z naszej hodowli albo chcesz porozmawiać o psach?
+    Zadzwoń lub napisz.</p>
     <p class="dane-linia">
-      <a href="tel:+48601237375">601 237 375</a> ·
+      <a href="tel:+48609754455">609 754 455</a> ·
       <a href="mailto:balao@balao.pl">balao@balao.pl</a><br>
       Anna Pyziak · Zakrzew 24, 26-902 Grabów nad Pilicą
     </p>
+    <p class="dane-info">Szukasz jazdy konnej? Stajnia ma osobny numer:
+    <a href="tel:+48601237375">601 237 375</a> · <a href="stajnia.html">strona stajni</a></p>
   </div>
 </section>
 
