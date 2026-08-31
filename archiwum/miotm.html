@@ -1,0 +1,397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//Dtd class="jeden" HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><meta name="robots" content="noindex,nofollow"><TITLE>Rodowód Michelle</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="style_pce.txt">
+
+
+<style type="text/css">
+.clTopMenu       {position:absolute; width:150px; height:250px; clip:rect(0px 150px 15px 0px);  z-index:3; visibility:hidden;font-size:9px; }
+.clTopMenuBottom {position:absolute;width:150px; height:3px; clip:rect(0px 150px 0px 0px); top:11; layer-background-color:#b5b6df; background-color:#b5b6df; z-index:2;}
+.clTopMenuText   {position:absolute; width:150px; left:0px; top:15px; font-family:arial,helvetica,sans-serif; font-size:11px; background-color:#eeeeee; z-index:1;}  
+</style>
+
+<script language="JavaScript" type="text/javascript">
+/**********************************************************************************   
+NewsMenu 
+*   Copyright (C) 2001 <a href="/dhtmlcentral/thomas_brattli.asp">Thomas Brattli</a>
+*   This script was released at DHTMLCentral.com
+*   Visit for more great scripts!
+*   This may be used and changed freely as long as this msg is intact!
+*   We will also appreciate any links you could give us.
+*
+*   Made by <a href="/dhtmlcentral/thomas_brattli.asp">Thomas Brattli</a> 
+*********************************************************************************/
+
+function lib_bwcheck(){ //Browsercheck (needed)
+	this.ver=navigator.appVersion
+	this.agent=navigator.userAgent
+	this.dom=document.getElementById?1:0
+	this.opera5=this.agent.indexOf("Opera 5")>-1
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom && !this.opera5)?1:0; 
+	this.ie6=(this.ver.indexOf("MSIE 6")>-1 && this.dom && !this.opera5)?1:0;
+	this.ie4=(document.all && !this.dom && !this.opera5)?1:0;
+	this.ie=this.ie4||this.ie5||this.ie6
+	this.mac=this.agent.indexOf("Mac")>-1
+	this.ns6=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie6 || this.ie5 || this.ie4 || this.ns4 || this.ns6 || this.opera5)
+	return this
+}
+var bw=new lib_bwcheck()
+
+
+/********************************************************************************
+If you want to change the appearance of the text, background-colors, size or
+anything do that in the style tag above.
+
+This menu might not be as easy to adapt to your own site, but please
+play around with it before you mail me for help...
+****************************************************************************/
+
+/***************************************************************************
+Variables to set.
+****************************************************************************/
+
+//There are 2 ways these menus can be placed
+// 0 = column
+// 1 = row
+nPlace=0
+
+
+//How many menus do you have? (remember to copy and add divs in the body if you add menus)
+var nNumberOfMenus=1
+
+var nMwidth=202 //The width on the menus (set the width in the stylesheet as well)
+var nPxbetween=20 //Pixels between the menus
+ var nFromleft=10 //The first menus left position
+var nFromtop=85 //The top position of the menus
+var nBgcolor='#eeeeee' //The bgColor of the bottom mouseover div 
+var nBgcolorchangeto='#eeeeee' //The bgColor to change to
+var nImageheight=11 //The position the mouseover line div will stop at when going up!
+
+/***************************************************************************
+You shouldn't have to change anything below this
+****************************************************************************/
+//Object constructor
+function makeNewsMenu(obj,nest){
+	nest=(!nest) ? "":'document.'+nest+'.'					
+   	this.css=bw.dom? document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+"document.layers." +obj):0;		
+	this.evnt=bw.dom? document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+"document.layers." +obj):0;			
+	this.scrollHeight=bw.ns4?this.css.document.height:this.evnt.offsetHeight
+	this.moveIt=b_moveIt;this.bgChange=b_bgChange;
+	this.slideUp=b_slideUp; this.slideDown=b_slideDown;
+	this.clipTo=b_clipTo;
+    this.obj = obj + "Object"; 	eval(this.obj + "=this")		
+}
+//Objects methods
+
+// A unit of measure that will be added when setting the position of a layer.
+var px = bw.ns4||window.opera?"":"px";
+
+function b_moveIt(x,y){this.x=x; this.y=y; this.css.left=this.x+px; this.css.top=this.y+px;}
+function b_bgChange(color){this.css.backgroundColor=color; this.css.bgColor=color; this.css.background=color;}
+function b_clipTo(t,r,b,l){
+	if(bw.ns4){this.css.clip.top=t; this.css.clip.right=r; this.css.clip.bottom=b; this.css.clip.left=l
+	}else this.css.clip="rect("+t+"px "+r+"px "+b+"px "+l+"px)";
+}
+function b_slideUp(ystop,moveby,speed,fn,wh){
+	if(!this.slideactive){
+		if(this.y>ystop){
+			this.moveIt(this.x,this.y-5); eval(wh)
+			setTimeout(this.obj+".slideUp("+ystop+","+moveby+","+speed+",'"+fn+"','"+wh+"')",speed)
+		}else{
+			this.slideactive=false; this.moveIt(0,ystop); eval(fn)
+		}
+	}
+}
+function b_slideDown(ystop,moveby,speed,fn,wh){
+	if(!this.slideactive){
+		if(this.y<ystop){
+			this.moveIt(this.x,this.y+5); eval(wh)
+			setTimeout(this.obj+".slideDown("+ystop+","+moveby+","+speed+",'"+fn+"','"+wh+"')",speed)
+		}else{
+			this.slideactive=false; this.moveIt(0,ystop); eval(fn)
+		}
+	}
+}
+//Initiating the page, making cross-browser objects
+function newsMenuInit(){
+	oTopMenu=new Array()
+	zindex=10
+	for(i=0;i<=nNumberOfMenus;i++){
+		oTopMenu[i]=new Array()
+		oTopMenu[i][0]=new makeNewsMenu('divTopMenu'+i)
+		oTopMenu[i][1]=new makeNewsMenu('divTopMenuBottom'+i,'divTopMenu'+i)
+		oTopMenu[i][2]=new makeNewsMenu('divTopMenuText'+i,'divTopMenu'+i)
+		oTopMenu[i][1].moveIt(0,nImageheight)
+		oTopMenu[i][0].clipTo(0,nMwidth,nImageheight+3,0)
+	
+		oTopMenu[i][0].css.visibility="visible"
+	}
+}
+
+
+
+//Moves the menu
+function topMenu(num){
+	if(oTopMenu[num][1].y==nImageheight) oTopMenu[num][1].slideDown(oTopMenu[num][2].scrollHeight+20,10,40,'oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)','oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)')
+	else if(oTopMenu[num][1].y==oTopMenu[num][2].scrollHeight+20) oTopMenu[num][1].slideUp(nImageheight,10,40,'oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)','oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)')
+}
+//Changes background onmouseover
+function menuOver(num){oTopMenu[num][1].bgChange(nBgcolorchangeto)}
+function menuOut(num){oTopMenu[num][1].bgChange(nBgcolor)}
+
+//Calls the init function onload if the browser is ok...
+if (bw.bw) onload = newsMenuInit;
+
+
+</script>
+
+
+</HEAD>
+<BODY background="images/bg_b.jpg" bgColor=#003399 leftMargin=0 topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<br>
+<TABLE cellSpacing=0 cellPadding=0 width="100%"   border=0>
+  <TBODY>
+  <TR>
+       <td class="jeden" valign="top">
+		  
+		<table width="655" cellspacing="2" cellpadding="5" border="0" align="center">
+		
+	
+<tr>
+    <td class="jeden" width="665" colspan="2" align="center">
+    <p style="margin-top: 0; margin-bottom: 0" align="left">MIOT &quot;M&quot; BALAO</p>
+    <p style="margin-top: 0; margin-bottom: 0" align="left">ur. 19.11.2007</p>
+    <p style="margin-top: 0; margin-bottom: 0" align="left">O: Multi, Int.Ch. 
+    QUITO della Baia Azzurra</p>
+    <p style="margin-top: 0; margin-bottom: 0" align="left">M: Int.Ch., Pl.Ch. 
+    NO DOUBT Balao</p>
+    <p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;</td class="jeden">
+</tr>
+
+	
+<tr>
+    <td class="jeden" width="354" align="center">
+    &nbsp;<p>PSY</p>
+    <p><img border="0" src="images/Krzyzak2.jpg" width="300" height="281"></p>
+    <p><img border="0" src="images/Krzyzak4.jpg" width="300" height="311"></p>
+    <p><img border="0" src="images/Krzyzak10.jpg" width="300" height="353"></p>
+    <p><img border="0" src="images/Krzyzak11.jpg" width="300" height="201"></p>
+    <p><img border="0" src="images/Krzyzak12.jpg" width="300" height="218"></p>
+    <p><img border="0" src="images/Krzyzak13.jpg" width="300" height="205"></p>
+    <p>MANITOU Balao</p>
+    <p>&nbsp;</p>
+    <p><img border="0" src="images/Hokej3.jpg" width="300" height="332"></p>
+    <p><img border="0" src="images/Hokej2.jpg" width="300" height="366"></p>
+    <p><img border="0" src="images/Hokej9.jpg" width="300" height="448"></p>
+    <p><img border="0" src="images/Hokej14.jpg" width="300" height="266"></p>
+    <p><img border="0" src="images/Hokej12.jpg" width="300" height="199"></p>
+    <p>MOONSHINE Balao</p>
+    <p>&nbsp;</p>
+    <p><img border="0" src="images/Kropek8.jpg" width="300" height="293"></p>
+    <p><img border="0" src="images/Kropek6.jpg" width="300" height="455"></p>
+    <p><img border="0" src="images/Kropek3.jpg" width="300" height="189"></p>
+    <p>MR. KROPEK Balao</p>
+    <p>&nbsp;</p>
+    <p><img border="0" src="images/Osobka3.jpg" width="300" height="251"></p>
+    <p><img border="0" src="images/Osobka10.jpg" width="300" height="302"></p>
+    <p><img border="0" src="images/Osobka9.jpg" width="300" height="345"></p>
+    <p><img border="0" src="images/Osobka11.jpg" width="300" height="322"></p>
+    <p><img border="0" src="images/Osobka17.jpg" width="300" height="207"></p>
+    <p>MOONLIGHT SHADOW Balao</p>
+    <p>&nbsp;</p>
+    <p><img border="0" src="images/Pion1.jpg" width="300" height="283"></p>
+    <p><img border="0" src="images/Pion8.jpg" width="300" height="383"></p>
+    <p><img border="0" src="images/Pion15.jpg" width="300" height="200"></p>
+    <p><img border="0" src="images/Pion22.jpg" width="300" height="184"></p>
+    <p>MACHO MEN Balao</p>
+    <p>&nbsp;</p>
+    <p><img border="0" src="images/Tete4.jpg" width="300" height="268"></p>
+    <p><img border="0" src="images/Tete5.jpg" width="300" height="281"></p>
+    <p><img border="0" src="images/Tete9.jpg" width="300" height="201"></p>
+    <p>MOVIE STAR Balao</p>
+    <p>&nbsp;</td class="jeden">
+    <td class="jeden" valign="top" width="311" align="center">
+    &nbsp;<p>SUKI</p>
+    <p><img border="0" src="images/Mettalica5.jpg" width="300" height="266"></p>
+    <p><img border="0" src="images/Mettalica6.jpg" width="300" height="334"></p>
+    <p><img border="0" src="images/Mettalica11.jpg" width="300" height="396"></p>
+    <p><img border="0" src="images/Mettalica12.jpg" width="300" height="177"></p>
+    <p>METTALICA Balao</p>
+    <p>&nbsp;</p>
+    <p><img border="0" src="images/Kreska3.jpg" width="300" height="245"></p>
+    <p><img border="0" src="images/Kreska7.jpg" width="300" height="340"></p>
+    <p><img border="0" src="images/Kreska.jpg" width="300" height="310"></p>
+    <p><img border="0" src="images/Kreska12.jpg" width="300" height="316"></p>
+    <p><img border="0" src="images/Kreska16.jpg" width="300" height="217"></p>
+    <p>MISSION IMPOSSIBLE Balao</p>
+    <p>&nbsp;</p>
+    <p><img border="0" src="images/Mewka.jpg" width="300" height="231"></p>
+    <p><img border="0" src="images/Mewka2.jpg" width="300" height="350"></p>
+    <p><img border="0" src="images/Mewka3.jpg" width="300" height="320"></p>
+    <p><img border="0" src="images/Mewka10.jpg" width="300" height="190"></p>
+    <p><img border="0" src="images/Mewka12.jpg" width="300" height="225"></p>
+    <p>MADNESS BLACK Balao</p>
+    <p>&nbsp;</p>
+    <p><img border="0" src="images/Pajak1.jpg" width="300" height="266"></p>
+    <p><img border="0" src="images/Pajak9.jpg" width="300" height="305"></p>
+    <p><img border="0" src="images/Pajak10.jpg" width="300" height="318"></p>
+    <p><img border="0" src="images/Pajak11.jpg" width="300" height="330"></p>
+    <p><img border="0" src="images/Pajak12.jpg" width="300" height="238"></p>
+    <p><img border="0" src="images/Pajak16.jpg" width="300" height="223"></p>
+    <p>MICHELLE MA BELLE Balao</p>
+    <p>&nbsp;</p>
+    <p><img border="0" src="images/Trzykropek5.jpg" width="300" height="336"></p>
+    <p><img border="0" src="images/Trzykropek12.jpg" width="300" height="225"></p>
+    <p><img border="0" src="images/Trzykropek10.jpg" width="300" height="441"><p>
+    <img border="0" src="images/Trzykropek14.jpg" width="300" height="235"><p>
+    <img border="0" src="images/Trzykropek15.jpg" width="300" height="201"><p>MADAME 
+    BUTTERFLY Balao</td class="jeden">
+</tr>
+<tr>
+    <td class="jeden" width="692" colspan="2">
+    <p align="center">5 &amp; 6 tygodni na zdjęciach</p>
+    <p align="center">&nbsp;</td class="jeden">
+</tr>
+<tr>
+    <td class="jeden" colspan=3 align="center" width="641">RODOWÓD</td class="jeden">
+ 
+</tr>	
+</table>
+<br>
+		  
+</td class="jeden">
+</TR>
+
+
+
+
+<TR>
+       <td class="jeden" vAlign=middle align="center">
+		  
+		<table width="90%" cellspacing="0" cellpadding="10" border="1" align="center" height="415">
+<tr>
+    <td class="jeden" colspan="2" width="50%"   valign="top" height="182" >
+   ojciec<div id="divTopMenu1" class="clTopMenu"><a href="#" onmouseover="menuOver(1)" onmouseout="menuOut(1)" onclick="topMenu(1); return false;" onfocus="if(this.blur)this.blur();">
+      <img src="images/fofo1.gif" border="0" alt="" width="150" height="15"></a>
+	<div id="divTopMenuText1" class="clTopMenuText">
+		<img border="0" src="images/quito11.jpg" width="202" height="250"></div>
+	<div id="divTopMenuBottom1" class="clTopMenuBottom"></div>
+</div>
+	
+
+	
+	
+	
+	<br><br>
+	QUITO-N Della Baia Azzurra<br>&nbsp;<p><br>
+	Maść czarna </p>
+	
+	<p style="margin-top: 0; margin-bottom: 0">
+
+INTERCHAMPION<br>
+Multi.Ch.<br>
+
+SIA Interclub Champion<br>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</td class="jeden">
+	
+    <td class="jeden" colspan="2" width="50%"  valign="top" height="182" >
+	matka<div id="divTopMenu0" class="clTopMenu"><a href="#" onmouseover="menuOver(0)" onmouseout="menuOut(0)" onclick="topMenu(0); return false;" onfocus="if(this.blur)this.blur();">
+      <img src="images/fofo1.gif" border="0" alt="" width="150" height="15"></a>
+	<div id="divTopMenuText0" class="clTopMenuText">
+		<img border="0" src="images/ty111.jpg" width="202" height="239" ></div>
+	<div id="divTopMenuBottom0" class="clTopMenuBottom"></div>
+</div>
+	
+	
+	
+	<p style="margin-top: 0; margin-bottom: 0">
+
+	<br><br>
+	
+	
+	&nbsp;<br>
+	NO DOUBT Balao<br><br>
+	
+	Maść błękitna<br>&nbsp;</p>
+	
+	
+	
+	<p style="margin-top: 0; margin-bottom: 0">
+	
+	
+	
+	&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0"> INTERCHAMPION<br>
+Champion Polski<br>
+
+<br><br>
+	</td class="jeden">
+</tr>
+
+
+
+
+
+<tr>
+    <td class="jeden" width="22%"  valign="top" height="189" >
+    ojciec
+	<p style="margin-top: 0; margin-bottom: 0">
+	
+	
+	
+	<br><br>
+	OFFMAN-B 
+    <p style="margin-top: 0; margin-bottom: 0">Della Baia Azzurra<br><br>
+	Maść błękitna
+<br><br>
+	
+	&nbsp;</p>
+    </td class="jeden">
+	
+	
+	
+	
+    <td class="jeden" width="28%"  valign="top" height="189" >matka<p>RANIA <br>
+   Des Habits Rouges<br><br>
+	
+	Maść czarna
+<br></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</td class="jeden">
+	
+	
+	
+    <td class="jeden" width="25%"  valign="top" height="167" >ojciec<br><br>
+	
+	QUIXOTE-B <br>del Regno di Fantasia<br><font size="1"><br>
+	
+	</font>Maść błękitna<br><br>INTERCHAMPION<br> Ch.Pl., Ch.H.<br>
+    OKV Bunndessieger'06<p style="margin-top: 0; margin-bottom: 0">Hungarian 
+    Club Junior Winner'05</td class="jeden"></td class="jeden">
+	
+	
+    <td class="jeden" width="25%"  valign="top" height="189" >matka<br><br>
+	JASMIN<br>
+	Medium<br><font size="1"><br>
+	
+	</font>Maść błękitna
+	<br><font size="1"><br>
+	</font>Int.CH., Multi CH.</td class="jeden">
+</tr>
+
+
+
+
+</table>
+
+		  
+		
+
+</td class="jeden">
+</TR>
+
+</TBODY></TABLE><br>
+</BODY></HTML>

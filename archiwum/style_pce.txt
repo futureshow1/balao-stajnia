@@ -1,0 +1,48 @@
+UNKNOWN {
+	FONT: 10pt verdana; COLOR: #ffff00; TEXT-DECORATION: none
+}
+A.TXTY:hover {
+	COLOR: #666699
+}
+.TXTB {
+	FONT: 12pt verdana, arial; COLOR: #000040; TEXT-DECORATION: none
+}
+A.TXTB:hover {
+	COLOR: #800000
+}
+.TXTW {
+	FONT: 8pt arial; COLOR: #000040; TEXT-DECORATION: none
+}
+A.TXTW:hover {
+	COLOR: #000000
+}
+.TEXT {
+	FONT: 9pt verdana, arial; COLOR: #000000; TEXT-DECORATION: none
+}
+.STEXT {
+	FONT: 7pt verdana, arial; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.TITLE {
+	FONT: 900 12pt verdana, arial; COLOR: #000000; TEXT-DECORATION: none
+}
+.TITLE1 {
+	FONT: 10pt verdana, arial; COLOR: #ffff00; TEXT-DECORATION: none
+}
+.STITLE {
+	FONT: 900 10pt verdana, arial; COLOR: #000000; TEXT-DECORATION: none
+}
+TD.jeden {
+	FONT: 900 10pt verdana, arial; COLOR: #000040; TEXT-DECORATION: none
+}
+TD.dwa {
+	FONT: 900 8pt verdana, arial; COLOR: #000040; TEXT-DECORATION: none
+}
+A {
+	FONT: 900 10pt verdana, arial; COLOR: #000040; TEXT-DECORATION: none
+}
+A.menulink {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffff00; LINE-HEIGHT: 22px; FONT-FAMILY: arial; LETTER-SPACING: 0.04em; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+A.menulink:hover {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #000040; LINE-HEIGHT: 22px; FONT-FAMILY: arial; LETTER-SPACING: 0.04em; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
