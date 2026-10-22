@@ -39,7 +39,7 @@ body{font-family:'Jost',sans-serif;color:var(--tekst);background:var(--krem);min
 /* DWA ŚWIATY — wspólna siatka: rząd 1 = zdjęcia, rząd 2 = pasy (zawsze równe) */
 .swiaty{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:0;min-height:62vh}
 .swiat{display:contents;text-decoration:none}
-.swiat .foto{position:relative;grid-row:1;min-height:360px;overflow:hidden}
+.swiat .foto{position:relative;grid-row:1;min-height:clamp(420px,56vh,600px);overflow:hidden}
 .swiat:first-child .foto,.swiat:first-child .pas{grid-column:1}
 .swiat-stajnia .foto,.swiat-stajnia .pas{grid-column:2}
 .swiat .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
@@ -96,7 +96,7 @@ footer .dane{letter-spacing:.04em}
   <a class="swiat swiat-stajnia" href="stajnia.html">
     <div class="foto">
       <span class="etykieta">Jazda konna</span>
-      <img src="../v3/img/kafel-trzy-glowy.jpg" alt="Trzy konie Stajni Balao — siwy, kary i kasztan" style="object-position:center 15%">
+      <img src="../v3/img/kafel-trzy-glowy.jpg" alt="Trzy konie Stajni Balao — siwy, kary i kasztan" style="object-position:center top">
     </div>
     <div class="pas">
       <h2>Stajnia Balao</h2>
